@@ -1,0 +1,108 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={`Contact | ${SITE_TITLE}`} description="Get in touch with me" />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<section>
+				<h1>Contact Me</h1>
+				<p>Feel free to reach out! I'm always interested in hearing about new opportunities and projects.</p>
+
+				<div class="contact-container">
+					<div class="contact-info">
+						<h2>Get in Touch</h2>
+
+						<div class="contact-method">
+							<h3>Location</h3>
+							<p>Chicago, IL 60657</p>
+						</div>
+
+						<div class="contact-method">
+							<h3>Email</h3>
+							<p><a href="mailto:lopata@ieee.org">lopata@ieee.org</a></p>
+						</div>
+
+						<div class="contact-method">
+							<h3>Schedule a Meeting</h3>
+							<p><a href="https://calendly.com/benlopata/meet" target="_blank">Book time on Calendly</a></p>
+						</div>
+
+						<div class="contact-method">
+							<h3>LinkedIn</h3>
+							<p><a href="https://linkedin.com/in/ben-lopata/" target="_blank">linkedin.com/in/ben-lopata</a></p>
+						</div>
+
+						<div class="contact-method">
+							<h3>Twitter</h3>
+							<p><a href="https://twitter.com/bengineer10" target="_blank">@bengineer10</a></p>
+						</div>
+
+						<div class="contact-method">
+							<h3>GitHub</h3>
+							<p><a href="https://github.com/benlopata" target="_blank">github.com/benlopata</a></p>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	main {
+		width: 960px;
+		max-width: calc(100% - 2em);
+		margin: auto;
+		padding: 3em 1em;
+	}
+
+	h1 {
+		font-size: 2.5em;
+		margin-bottom: 0.5em;
+	}
+
+	.contact-container {
+		max-width: 600px;
+		margin: 2rem auto;
+	}
+
+	.contact-info h2 {
+		font-size: 1.5em;
+		margin-bottom: 1.5rem;
+		color: rgb(var(--accent));
+		text-align: center;
+	}
+
+	.contact-method {
+		margin-bottom: 1.5rem;
+	}
+
+	.contact-method h3 {
+		margin: 0 0 0.5rem 0;
+		font-size: 1.1em;
+		color: rgb(var(--gray-dark));
+	}
+
+	.contact-method p {
+		margin: 0;
+	}
+
+	.contact-method a {
+		color: rgb(var(--accent));
+		text-decoration: none;
+	}
+
+	.contact-method a:hover {
+		text-decoration: underline;
+	}
+</style>
