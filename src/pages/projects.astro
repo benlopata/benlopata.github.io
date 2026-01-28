@@ -18,13 +18,26 @@ import { SITE_TITLE } from '../consts';
 				<p>Here are some of my notable projects:</p>
 
 				<div class="projects-grid">
+					<div class="project-card">
+						<h3>HoundBound</h3>
+						<p>A marketplace connecting owners of high-energy dogs with local runners for high-intensity exercise sessions. Built with Dart and Flutter. Launching in Chicago, Spring 2026.</p>
+						<div class="project-links">
+							<a href="https://houndbound.dog" target="_blank">Sign Up For The Waitlist Now</a>
+						</div>
+					</div>
+
 					<div class="project-card featured">
 						<h3>SiteSage</h3>
 						<p class="project-tagline">RAG-like search on any webpage!</p>
-						<div class="video-container">
-							<iframe scrolling='no' frameborder='0' style='width: 100%; height: 628px; border:0;' src='https://app.screencast.com/9dUkYTiOEFoAI/e' allowfullscreen></iframe>
-						</div>
 						<p>A Chrome extension using Jina Reader API to provide a foundational LLM with the page contents for RAG-like search. Useful for querying research papers, technical documentation, or any dense text.</p>
+						<div class="demo-section">
+							<a href="https://app.screencast.com/9dUkYTiOEFoAI/e" target="_blank" class="demo-btn">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+									<polygon points="5 3 19 12 5 21 5 3"></polygon>
+								</svg>
+								Watch Demo Video
+							</a>
+						</div>
 					</div>
 
 					<div class="project-card">
@@ -103,17 +116,34 @@ import { SITE_TITLE } from '../consts';
 		margin-bottom: 1rem;
 	}
 
-	.video-container {
-		margin: 1.5rem 0;
-		border-radius: 8px;
-		overflow: hidden;
-		max-width: 600px;
-		margin-left: auto;
-		margin-right: auto;
+	.demo-section {
+		margin-top: 1.5rem;
+		text-align: center;
 	}
 
-	.video-container iframe {
-		display: block;
+	.demo-btn {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.75rem;
+		padding: 1rem 2rem;
+		background: rgb(var(--accent));
+		color: white;
+		text-decoration: none;
+		border-radius: 8px;
+		font-weight: bold;
+		font-size: 1.1em;
+		transition: all 0.2s ease;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	}
+
+	.demo-btn:hover {
+		opacity: 0.9;
+		transform: translateY(-2px);
+		box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+	}
+
+	.demo-btn svg {
+		flex-shrink: 0;
 	}
 
 	.project-links {
@@ -141,12 +171,9 @@ import { SITE_TITLE } from '../consts';
 			grid-template-columns: 1fr;
 		}
 
-		.video-container {
-			max-width: 100%;
-		}
-
-		.video-container iframe {
-			height: 500px;
+		.demo-btn {
+			font-size: 1em;
+			padding: 0.875rem 1.5rem;
 		}
 	}
 </style>
